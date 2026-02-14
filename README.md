@@ -2,7 +2,7 @@
 
 Multi-version Minecraft-compatible client written in Rust, forked from [Stevenarella](https://github.com/iceiix/stevenarella/).
 
-Installer: https://github.com/Lea-fish/Leafish/releases/tag/v0.0.1-alpha
+Installer: https://github.com/Lea-fish/Leafish/releases/tag/v0.0.1-alpha 
 
 ---
 
