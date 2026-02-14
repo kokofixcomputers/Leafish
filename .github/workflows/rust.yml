@@ -27,7 +27,7 @@ jobs:
             release-name: Leafish.app
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Install Rust
         id: toolchain
@@ -36,7 +36,7 @@ jobs:
           toolchain: stable
           components: clippy, rustfmt
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: |
             ~/.cargo/bin/
@@ -80,7 +80,7 @@ jobs:
           zip -r Leafish.app.zip Leafish.app
 
       - name: Upload binary
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.release-name }}
           path: target/release/${{ matrix.target-name }}
@@ -90,4 +90,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            target/release/${{ matrix.name }}
+            target/release/${{ matrix.target-name }}
